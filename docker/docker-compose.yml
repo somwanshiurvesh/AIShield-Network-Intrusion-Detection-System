@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    container_name: nids-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../backend:/app
+      - ../backend/data:/app/data
+      - ../backend/models:/app/models
+      - ../backend/eval:/app/eval
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+    container_name: nids-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8000
+    restart: unless-stopped 

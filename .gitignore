@@ -1,0 +1,81 @@
+# Python backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+venv/
+ENV/
+
+# React frontend
+node_modules/
+/frontend/build
+/frontend/.env
+/frontend/coverage
+/frontend/.DS_Store
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# Models and data
+/backend/models/*.pkl
+/backend/data/*.txt
+/backend/data/*.csv
+/backend/eval/*.json
+/backend/eval/*.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log 
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# ML model artifacts
+*.pkl
+
+# Large NSL-KDD dataset files
+NSL KDD/*.txt
+NSL KDD/*.arff
+NSL KDD/nsl-kdd/*.txt
+NSL KDD/nsl-kdd/*.arff
+backend/data/*.txt
+backend/data/*.arff
+
+# Training artifacts
+backend/models/train_data.pkl
+backend/models/test_data.pkl
